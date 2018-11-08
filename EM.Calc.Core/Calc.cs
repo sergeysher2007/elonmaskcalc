@@ -34,8 +34,9 @@ namespace EM.Calc.Core
                 LoadOperations(Assembly.GetExecutingAssembly());
             }
 
-            var dllFiles = Directory.GetFiles(path, "*.dll", SearchOption.TopDirectoryOnly);
-            foreach (var file in dllFiles)
+
+            var dllfiles = Directory.GetFiles(path, "*.dll", SearchOption.TopDirectoryOnly);
+            foreach (var file in dllfiles)
             {
                 LoadOperations(Assembly.LoadFrom(file));
             }
